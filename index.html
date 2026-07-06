@@ -1,33 +1,1061 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lance Frost | IT, Cybersecurity & AI Automation Portfolio</title>
+  <meta name="description" content="Portfolio resume for Lance Frost: IT professional, computer repair business owner, cybersecurity student, ethical hacking practitioner, AI workflow automation builder, and MSP support provider." />
+  <style>
+:root {
+  --bg: #020712;
+  --bg2: #061326;
+  --panel: rgba(7, 18, 35, 0.88);
+  --panel2: rgba(11, 31, 58, 0.78);
+  --text: #eef9ff;
+  --muted: #abc1d6;
+  --cyan: #24d9ff;
+  --blue: #177bff;
+  --green: #7cff2f;
+  --purple: #a855f7;
+  --pink: #ff3c96;
+  --ice: #dff9ff;
+  --border: rgba(36, 217, 255, 0.34);
+  --border2: rgba(124, 255, 47, 0.32);
+  --shadow: 0 0 30px rgba(36, 217, 255, 0.18);
+  --shadow2: 0 0 34px rgba(124, 255, 47, 0.12);
+  --radius: 22px;
+  --max: 1190px;
+}
 
-  <title>Lance Frost | IT, Cybersecurity & AI Automation Resume</title>
+* {
+  box-sizing: border-box;
+}
 
-  <meta
-    name="description"
-    content="Online resume for Lance Frost, IT technician, cybersecurity student, business owner, ethical hacker, and AI automation builder."
-  />
+html {
+  scroll-behavior: smooth;
+}
 
-  <link rel="stylesheet" href="styles.css" />
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(36, 217, 255, 0.15), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(168, 85, 247, 0.16), transparent 30%),
+    radial-gradient(circle at 50% 100%, rgba(124, 255, 47, 0.09), transparent 35%),
+    linear-gradient(135deg, #02040a 0%, #061326 45%, #020712 100%);
+  overflow-x: hidden;
+}
+
+body.locked {
+  overflow: hidden;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--green);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at center, rgba(36, 217, 255, 0.13), transparent 32%),
+    linear-gradient(135deg, #02040a, #071527 60%, #02040a);
+  transition: opacity 0.55s ease, visibility 0.55s ease;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-shell {
+  width: min(560px, 100%);
+  padding: 34px;
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  background: rgba(4, 12, 25, 0.92);
+  box-shadow: 0 0 50px rgba(36, 217, 255, 0.22);
+  text-align: center;
+}
+
+.loader-logo {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  color: var(--cyan);
+  font-size: 46px;
+  background: linear-gradient(135deg, rgba(36, 217, 255, 0.18), rgba(168, 85, 247, 0.14));
+  box-shadow: var(--shadow);
+}
+
+.loader h1 {
+  margin: 0 0 20px;
+  font-size: clamp(1.35rem, 4vw, 2rem);
+  letter-spacing: 3px;
+}
+
+.loader-terminal {
+  padding: 18px;
+  border: 1px solid rgba(36, 217, 255, 0.22);
+  border-radius: 16px;
+  text-align: left;
+  color: var(--green);
+  background: rgba(0, 0, 0, 0.25);
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 0.95rem;
+}
+
+.loader-terminal p {
+  margin: 0 0 9px;
+}
+
+.loader-terminal p:last-child {
+  margin-bottom: 0;
+}
+
+.loader-terminal .ready {
+  color: var(--cyan);
+}
+
+.loading-bar {
+  height: 10px;
+  margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(36, 217, 255, 0.25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.loading-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--cyan), var(--green));
+  animation: loadBar 3s linear forwards;
+}
+
+@keyframes loadBar {
+  to { width: 100%; }
+}
+
+.page-glow {
+  position: fixed;
+  top: -180px;
+  right: -160px;
+  z-index: -4;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  background: rgba(36, 217, 255, 0.18);
+  filter: blur(85px);
+}
+
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(36, 217, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(36, 217, 255, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent 92%);
+}
+
+.hero,
+main,
+footer {
+  width: min(var(--max), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 26px 0 74px;
+}
+
+.nav {
+  position: sticky;
+  top: 12px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(3, 10, 22, 0.86);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--text);
+}
+
+.brand-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid rgba(36, 217, 255, 0.65);
+  border-radius: 17px;
+  color: var(--cyan);
+  font-size: 30px;
+  background: linear-gradient(135deg, rgba(36, 217, 255, 0.18), rgba(168, 85, 247, 0.11));
+  box-shadow: 0 0 18px rgba(36, 217, 255, 0.34);
+}
+
+.brand strong {
+  display: block;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.brand small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.menu-button {
+  display: none;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  background: rgba(255,255,255,0.04);
+  font-size: 1.3rem;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.nav-links a {
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: var(--green);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(310px, 0.92fr);
+  gap: 34px;
+  align-items: center;
+  padding-top: 82px;
+}
+
+.eyebrow,
+.section-tag {
+  margin: 0;
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.section h2 {
+  margin: 14px 0 18px;
+  line-height: 0.98;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 820px;
+  font-size: clamp(2.7rem, 6.4vw, 6rem);
+  text-shadow: 0 0 18px rgba(36, 217, 255, 0.32);
+}
+
+.hero h1::first-line {
+  color: var(--ice);
+}
+
+.hero-text,
+.section-heading p,
+.panel p,
+.project-card p,
+.education-card p,
+.value-grid p,
+.contact-section p,
+.skill-box p,
+.operator-quote {
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.hero-text {
+  max-width: 760px;
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 13px 19px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-size: 0.88rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.btn.primary {
+  color: #03111c;
+  background: linear-gradient(135deg, var(--green), var(--cyan));
+  box-shadow: 0 0 24px rgba(124, 255, 47, 0.24);
+}
+
+.btn.secondary {
+  color: var(--text);
+  background: rgba(11, 31, 58, 0.82);
+}
+
+.operator-card,
+.stat-card,
+.panel,
+.skill-box,
+.timeline-content,
+.project-card,
+.education-card,
+.value-grid > div,
+.contact-card,
+.command-center {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, var(--panel), var(--panel2));
+  box-shadow: var(--shadow);
+}
+
+.operator-card {
+  position: relative;
+  overflow: hidden;
+  padding: 28px;
+}
+
+.operator-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(circle at 80% 5%, rgba(124, 255, 47, 0.16), transparent 28%);
+  pointer-events: none;
+}
+
+.operator-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.operator-avatar {
+  width: 82px;
+  height: 82px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(124, 255, 47, 0.55);
+  border-radius: 24px;
+  color: var(--green);
+  background: rgba(124, 255, 47, 0.08);
+  box-shadow: var(--shadow2);
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.operator-label {
+  margin: 0 0 7px;
+  color: var(--cyan);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.operator-card h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.operator-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.operator-grid div {
+  padding: 13px;
+  border: 1px solid rgba(36, 217, 255, 0.2);
+  border-radius: 15px;
+  background: rgba(0,0,0,0.15);
+}
+
+.operator-grid span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.operator-grid strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--ice);
+}
+
+.operator-scan {
+  position: relative;
+  height: 112px;
+  margin: 24px 0;
+  overflow: hidden;
+  border: 1px solid rgba(36, 217, 255, 0.2);
+  border-radius: 18px;
+  background:
+    linear-gradient(rgba(36, 217, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(36, 217, 255, 0.06) 1px, transparent 1px),
+    rgba(0, 0, 0, 0.17);
+  background-size: 18px 18px;
+}
+
+.operator-scan span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--green), transparent);
+  box-shadow: 0 0 20px var(--green);
+  animation: scanLine 2.8s ease-in-out infinite;
+}
+
+@keyframes scanLine {
+  0% { top: 0; opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { top: 100%; opacity: 0.2; }
+}
+
+.operator-quote {
+  position: relative;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: -34px;
+}
+
+.stat-card {
+  padding: 22px;
+}
+
+.stat-card span {
+  display: block;
+  color: var(--cyan);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.stat-card p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.section {
+  margin-top: 92px;
+}
+
+.section-heading {
+  max-width: 880px;
+  margin-bottom: 24px;
+}
+
+.section-heading.compact {
+  margin-bottom: 0;
+}
+
+.section h2 {
+  font-size: clamp(2rem, 4vw, 3.65rem);
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.panel,
+.skill-box,
+.timeline-content,
+.project-card,
+.education-card,
+.value-grid > div,
+.contact-card,
+.command-center {
+  padding: 26px;
+}
+
+.panel p:first-child,
+.project-card p:first-child,
+.education-card p:first-child {
+  margin-top: 0;
+}
+
+.panel p:last-child,
+.project-card p:last-child,
+.education-card p:last-child {
+  margin-bottom: 0;
+}
+
+.command-center {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.command-buttons {
+  display: grid;
+  gap: 10px;
+}
+
+.command-button {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid rgba(36, 217, 255, 0.22);
+  border-radius: 14px;
+  color: var(--text);
+  background: rgba(255,255,255,0.035);
+  text-align: left;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.command-button:hover,
+.command-button.active {
+  color: #03111c;
+  border-color: rgba(124, 255, 47, 0.7);
+  background: linear-gradient(135deg, var(--green), var(--cyan));
+}
+
+.command-display {
+  overflow: hidden;
+  border: 1px solid rgba(36, 217, 255, 0.25);
+  border-radius: 18px;
+  background: rgba(0,0,0,0.25);
+}
+
+.terminal-top {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 15px;
+  border-bottom: 1px solid rgba(36, 217, 255, 0.2);
+  background: rgba(255,255,255,0.035);
+}
+
+.terminal-top span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+
+.terminal-top span:nth-child(2) { background: var(--purple); }
+.terminal-top span:nth-child(3) { background: var(--green); }
+
+pre {
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  color: var(--green);
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.62;
+  white-space: pre-wrap;
+}
+
+.network-map {
+  position: relative;
+  min-height: 680px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at center, rgba(36, 217, 255, 0.15), transparent 24%),
+    linear-gradient(rgba(36, 217, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(36, 217, 255, 0.04) 1px, transparent 1px),
+    rgba(4, 13, 26, 0.72);
+  background-size: auto, 34px 34px, 34px 34px, auto;
+  box-shadow: var(--shadow);
+}
+
+.network-map::before,
+.network-map::after {
+  content: "";
+  position: absolute;
+  inset: 50%;
+  width: 780px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, transparent, rgba(36, 217, 255, 0.45), transparent);
+  box-shadow: 0 0 18px rgba(36,217,255,0.3);
+}
+
+.network-map::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.map-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 210px;
+  height: 210px;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 7px;
+  border: 1px solid rgba(124, 255, 47, 0.56);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 255, 47, 0.16), rgba(7, 18, 35, 0.94));
+  box-shadow: 0 0 45px rgba(124, 255, 47, 0.18), 0 0 30px rgba(36, 217, 255, 0.18);
+  text-align: center;
+}
+
+.map-core span {
+  color: var(--cyan);
+  font-size: 2.4rem;
+}
+
+.map-core strong {
+  font-size: 1.35rem;
+}
+
+.map-core small {
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.map-node {
+  position: absolute;
+  z-index: 3;
+  width: 260px;
+  padding: 18px;
+  border: 1px solid rgba(36, 217, 255, 0.33);
+  border-radius: 18px;
+  background: rgba(7, 18, 35, 0.9);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.map-node:hover {
+  transform: translateY(-5px);
+  border-color: rgba(124, 255, 47, 0.7);
+}
+
+.map-node h3 {
+  margin: 0 0 8px;
+  color: var(--ice);
+}
+
+.map-node p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 0.9rem;
+}
+
+.node-1 { left: 5%; top: 8%; }
+.node-2 { right: 5%; top: 8%; }
+.node-3 { left: 5%; top: 40%; }
+.node-4 { right: 5%; top: 40%; }
+.node-5 { left: 20%; bottom: 7%; }
+.node-6 { right: 20%; bottom: 7%; }
+
+.skills-grid,
+.project-grid,
+.value-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skill-box,
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-box::before,
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(36, 217, 255, 0.14);
+  filter: blur(22px);
+}
+
+.skill-box h3,
+.timeline-content h3,
+.project-card h3,
+.education-card h3,
+.value-grid h3 {
+  position: relative;
+  margin: 0 0 10px;
+  color: var(--ice);
+}
+
+.timeline {
+  display: grid;
+  gap: 22px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 22px;
+}
+
+.timeline-date {
+  padding-top: 24px;
+  color: var(--green);
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.role {
+  color: var(--cyan) !important;
+  margin-top: -5px;
+  font-weight: 900;
+}
+
+ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+li::marker {
+  color: var(--green);
+}
+
+.project-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project-card.featured {
+  grid-column: span 2;
+  border-color: rgba(124, 255, 47, 0.44);
+}
+
+.project-label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px 11px;
+  border: 1px solid rgba(124, 255, 47, 0.45);
+  border-radius: 999px;
+  color: var(--green);
+  background: rgba(124, 255, 47, 0.07);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.tech-stack {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.tech-stack span {
+  display: inline-flex;
+  padding: 7px 10px;
+  border: 1px solid rgba(36, 217, 255, 0.25);
+  border-radius: 999px;
+  color: var(--cyan);
+  background: rgba(36, 217, 255, 0.07);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.education-list {
+  display: grid;
+  gap: 18px;
+}
+
+.value-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.contact-card p {
+  margin: 0 0 14px;
+}
+
+.contact-card p:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  margin-top: 64px;
+  padding: 34px 0 46px;
+  border-top: 1px solid rgba(36, 217, 255, 0.16);
+  color: var(--muted);
+  text-align: center;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1100px) {
+  .hero-grid,
+  .two-column,
+  .contact-section,
+  .command-center {
+    grid-template-columns: 1fr;
+  }
+
+  .stats,
+  .skills-grid,
+  .project-grid,
+  .value-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card.featured {
+    grid-column: span 2;
+  }
+
+  .network-map {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .network-map::before,
+  .network-map::after {
+    display: none;
+  }
+
+  .map-core,
+  .map-node {
+    position: relative;
+    inset: auto;
+    width: auto;
+    height: auto;
+    transform: none;
+  }
+
+  .map-core {
+    min-height: 180px;
+    border-radius: 22px;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero,
+  main,
+  footer {
+    width: min(100% - 24px, var(--max));
+  }
+
+  .hero {
+    padding-top: 16px;
+    padding-bottom: 54px;
+  }
+
+  .nav {
+    align-items: flex-start;
+  }
+
+  .menu-button {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 12px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero-grid {
+    padding-top: 48px;
+  }
+
+  .hero h1,
+  .section h2 {
+    letter-spacing: -1px;
+  }
+
+  .stats,
+  .skills-grid,
+  .project-grid,
+  .value-grid,
+  .network-map {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.featured,
+  .map-core {
+    grid-column: span 1;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .timeline-date {
+    padding-top: 0;
+  }
+
+  .operator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loader-shell {
+    padding: 24px;
+  }
+
+  pre {
+    padding: 18px;
+    font-size: 0.82rem;
+  }
+}
+
+</style>
 </head>
-
 <body>
-  <div class="page-glow"></div>
-
-  <header class="hero">
-    <nav class="nav">
-      <div class="brand">
-        <div class="brand-icon">❄</div>
-        <div>
-          <h1>Lance Frost</h1>
-          <p>IT • Cybersecurity • AI Automation</p>
-        </div>
+  <div id="loader" class="loader" aria-label="Loading portfolio">
+    <div class="loader-shell">
+      <div class="loader-logo">❄</div>
+      <h1>FROST PORTFOLIO SYSTEM</h1>
+      <div class="loader-terminal" aria-hidden="true">
+        <p>Initializing operator profile...</p>
+        <p>Loading IT repair history...</p>
+        <p>Loading cybersecurity labs...</p>
+        <p>Loading AI automation workflows...</p>
+        <p class="ready">SYSTEM READY</p>
       </div>
+      <div class="loading-bar"><span></span></div>
+    </div>
+  </div>
 
-      <div class="nav-links">
+  <div class="page-glow"></div>
+  <div class="grid-bg"></div>
+
+  <header class="hero" id="top">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-icon">❄</span>
+        <span>
+          <strong>Lance Frost</strong>
+          <small>IT • Cybersecurity • AI Automation</small>
+        </span>
+      </a>
+
+      <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#command">Command Center</a>
+        <a href="#network-map">Network Map</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
@@ -36,382 +1064,459 @@
     </nav>
 
     <section class="hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Kingman, Arizona • Computer Repair • Ethical Hacking • AI Tools</p>
-
-        <h2>
-          Computer Repair Tech, Cybersecurity Builder,
-          <span>and AI Automation Creator.</span>
-        </h2>
-
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Kingman, Arizona • MSP Support • Ethical Hacking • AI Workflow Automation</p>
+        <h1>IT Professional with a Cybersecurity Mindset and AI Builder Mentality.</h1>
         <p class="hero-text">
-          I build, repair, troubleshoot, secure, and automate technology. My background includes
-          hands-on computer repair, Windows and Linux troubleshooting, cybersecurity labs, ethical
-          hacking tools, business ownership, and AI automation projects using OpenClaw and Venice.ai.
+          I repair real systems, support real customers, build real labs, compete in cybersecurity challenges, and create AI-powered workflows that improve diagnostics, documentation, support, and technician productivity.
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn secondary" href="#contact">Contact Me</a>
+          <a class="btn primary" href="#command">Launch Command Center</a>
+          <a class="btn secondary" href="https://github.com/hackmeoffplz" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/lance-frost-212480397/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
 
-      <aside class="terminal-card">
-        <div class="terminal-top">
-          <span></span>
-          <span></span>
+      <aside class="operator-card reveal" aria-label="Operator profile card">
+        <div class="operator-header">
+          <div class="operator-avatar">LF</div>
+          <div>
+            <p class="operator-label">FROST OPERATOR PROFILE</p>
+            <h2>Lance Frost</h2>
+          </div>
+        </div>
+
+        <div class="operator-grid">
+          <div><span>Status</span><strong>Active</strong></div>
+          <div><span>Location</span><strong>Kingman, AZ</strong></div>
+          <div><span>Focus</span><strong>IT / Cyber / AI</strong></div>
+          <div><span>Mode</span><strong>Builder</strong></div>
+        </div>
+
+        <div class="operator-scan">
           <span></span>
         </div>
 
-        <pre><code>frost@resume:~$ whoami
-Lance Frost
-
-frost@resume:~$ skills --core
-Windows Repair
-Linux / Kali
-Networking
-Cybersecurity
-AI Automation
-Customer Support
-Business Ownership
-
-frost@resume:~$ motto
-Train like a hacker.
-Think like a defender.</code></pre>
+        <p class="operator-quote">“Train like a hacker. Think like a defender.”</p>
       </aside>
     </section>
   </header>
 
   <main>
-    <section class="stats">
-      <div class="stat-card">
-        <h3>20+ Years</h3>
-        <p>Hands-on technology, repair, support, and troubleshooting experience.</p>
+    <section class="stats reveal">
+      <div class="stat-card"><span>20+</span><p>Years hands-on technology, repair, troubleshooting, and support experience</p></div>
+      <div class="stat-card"><span>2021–Present</span><p>Owner and lead technician at Kingman Computers / Kingman Computer Repair LLC</p></div>
+      <div class="stat-card"><span>Cyber Team</span><p>Raptos cybersecurity team member competing in CTF and cyber challenges</p></div>
+      <div class="stat-card"><span>AI Ops</span><p>LLM workflow builder focused on support automation and technician productivity</p></div>
+    </section>
+
+    <section class="section command-section reveal" id="command">
+      <div class="section-heading">
+        <p class="section-tag">Interactive Resume Interface</p>
+        <h2>Frost Command Center</h2>
+        <p>Click a module to load a focused profile summary. This makes the portfolio feel like a cyber operations dashboard instead of a normal resume.</p>
       </div>
 
-      <div class="stat-card">
-        <h3>Owner</h3>
-        <p>Founder and operator of Kingman Computer Repair LLC.</p>
-      </div>
+      <div class="command-center">
+        <div class="command-buttons" role="tablist" aria-label="Command center modules">
+          <button class="command-button active" data-command="overview">Overview</button>
+          <button class="command-button" data-command="cyber">Cybersecurity</button>
+          <button class="command-button" data-command="ai">AI Automation</button>
+          <button class="command-button" data-command="msp">MSP / Repair</button>
+          <button class="command-button" data-command="education">Education</button>
+        </div>
 
-      <div class="stat-card">
-        <h3>Cyber Focus</h3>
-        <p>Ethical hacking labs, Kali Linux, OSINT, networking, and security training.</p>
-      </div>
+        <div class="command-display">
+          <div class="terminal-top"><span></span><span></span><span></span></div>
+          <pre id="commandOutput"><code>frost@command-center:~$ run overview
 
-      <div class="stat-card">
-        <h3>AI Builder</h3>
-        <p>Built AI automation workflows using OpenClaw and Venice.ai.</p>
+[✓] Owner of Kingman Computers / Kingman Computer Repair LLC
+[✓] Former Manager / Lead Technician at Computer Nerds
+[✓] Bachelor’s in Computer Information Technology, Cybersecurity major, Fall 2026
+[✓] Raptos cybersecurity team member and CTF competitor
+[✓] AI workflow builder using LLMs for practical IT support automation
+[✓] Creator of Frost Hacking Academy cybersecurity software and training program
+
+Result: practical technician + cybersecurity mindset + AI automation builder</code></pre>
+        </div>
       </div>
     </section>
 
-    <section id="about" class="section two-column">
-      <div>
-        <p class="section-tag">About Me</p>
-        <h2>Practical IT skills with a cybersecurity mindset.</h2>
+    <section class="section reveal" id="network-map">
+      <div class="section-heading">
+        <p class="section-tag">Visual Proof of Work</p>
+        <h2>Cyber Network Map</h2>
+        <p>A visual map of the skills, projects, and experience that connect my IT, cybersecurity, and AI automation background.</p>
       </div>
 
+      <div class="network-map" aria-label="Cyber network map">
+        <div class="map-core">
+          <span>❄</span>
+          <strong>Lance Frost</strong>
+          <small>IT • Cyber • AI</small>
+        </div>
+
+        <div class="map-node node-1">
+          <h3>Kingman Computers</h3>
+          <p>Repair business owner, MSP-style support, diagnostics, customer systems, and small business technology.</p>
+        </div>
+
+        <div class="map-node node-2">
+          <h3>Cybersecurity</h3>
+          <p>Kali Linux, Nmap, Wireshark, OSINT, CTFs, ethical hacking, web labs, and defensive reporting.</p>
+        </div>
+
+        <div class="map-node node-3">
+          <h3>AI Automation</h3>
+          <p>LLM-powered workflows for support, diagnostics, documentation, email, data sorting, and productivity.</p>
+        </div>
+
+        <div class="map-node node-4">
+          <h3>Frost Academy</h3>
+          <p>Cybersecurity software and training program with rooms, labs, cheat sheets, challenges, and projects.</p>
+        </div>
+
+        <div class="map-node node-5">
+          <h3>Raptos Team</h3>
+          <p>School cybersecurity team member competing in capture-the-flag and cyber security events.</p>
+        </div>
+
+        <div class="map-node node-6">
+          <h3>Networking Labs</h3>
+          <p>VPN, PiVPN, Pi-hole, Raspberry Pi, DNS, DHCP, routers, Wi-Fi, servers, and home lab builds.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section two-column reveal" id="summary">
+      <div class="section-heading compact">
+        <p class="section-tag">Professional Summary</p>
+        <h2>Built from real support, real labs, and real problem solving.</h2>
+      </div>
       <div class="panel">
         <p>
-          I am a computer repair technician, business owner, cybersecurity learner, and ethical
-          hacking enthusiast with a strong focus on real-world troubleshooting. I enjoy solving
-          technical problems, building labs, learning security tools, and creating systems that help
-          people work faster and safer.
+          I am an IT professional, business owner, cybersecurity student, ethical hacking practitioner, and AI workflow builder with deep hands-on experience in computer repair, diagnostics, Windows and Linux support, networking, MSP-style business support, malware cleanup, driver repair, user assistance, and technical documentation.
         </p>
-
         <p>
-          My experience comes from years of hands-on repair work, customer support, hardware and
-          software diagnostics, Windows and Linux troubleshooting, network setup, malware cleanup,
-          driver repair, data organization, and technical problem solving. I also build cybersecurity
-          and AI projects that show my ability to learn modern tools and turn them into practical
-          solutions.
+          My strength is practical execution. I do not only study technology; I repair it, support it, document it, secure it, automate it, and build training around it. I bring the mindset of a technician, the discipline of a cybersecurity student, the creativity of a builder, and the communication skills of a business owner.
         </p>
       </div>
     </section>
 
-    <section class="section">
-      <p class="section-tag">Core Skills</p>
-      <h2>Technical Strengths</h2>
+    <section class="section reveal" id="skills">
+      <div class="section-heading">
+        <p class="section-tag">Skill Stack</p>
+        <h2>Technical Skills</h2>
+      </div>
 
       <div class="skills-grid">
-        <div class="skill-box">
-          <h3>Computer Repair</h3>
-          <p>Diagnostics, hardware replacement, Windows repair, driver fixes, malware cleanup, data backup, and customer support.</p>
-        </div>
-
-        <div class="skill-box">
-          <h3>Windows & Linux</h3>
-          <p>Windows 10/11, Kali Linux, basic server troubleshooting, command-line tools, permissions, services, and system recovery.</p>
-        </div>
-
-        <div class="skill-box">
-          <h3>Cybersecurity</h3>
-          <p>Ethical hacking labs, Kali tools, Nmap, Wireshark, OSINT, CTF practice, password security, and defensive thinking.</p>
-        </div>
-
-        <div class="skill-box">
-          <h3>Networking</h3>
-          <p>Routers, Wi-Fi troubleshooting, IP addressing, DNS, VPN projects, Raspberry Pi labs, and small business network support.</p>
-        </div>
-
-        <div class="skill-box">
-          <h3>AI Automation</h3>
-          <p>AI agent workflows, LLM integrations, computer-control automation, email automation, software generation, and data sorting.</p>
-        </div>
-
-        <div class="skill-box">
-          <h3>Business & Leadership</h3>
-          <p>Customer service, repair shop ownership, team leadership, daily operations, technical sales, documentation, and problem solving.</p>
-        </div>
+        <div class="skill-box"><h3>IT Support</h3><p>Windows repair, troubleshooting, data transfer, OS recovery, customer support, diagnostics, system optimization, and repair documentation.</p></div>
+        <div class="skill-box"><h3>MSP / Business Support</h3><p>Small business workstation support, router troubleshooting, printer issues, remote support, user assistance, backups, and ongoing service.</p></div>
+        <div class="skill-box"><h3>Cybersecurity</h3><p>Ethical hacking methodology, CTF practice, vulnerability research, security documentation, hardening, and defensive recommendations.</p></div>
+        <div class="skill-box"><h3>Penetration Testing Labs</h3><p>Kali Linux, Nmap, Wireshark, Burp Suite, OSINT, web app testing labs, enumeration, recon, and reporting in authorized environments.</p></div>
+        <div class="skill-box"><h3>Networking</h3><p>IP addressing, DNS, DHCP, routers, Wi-Fi, VPNs, PiVPN, Pi-hole, home labs, network diagrams, and troubleshooting connectivity.</p></div>
+        <div class="skill-box"><h3>AI Automation</h3><p>LLM workflow design, AI-assisted support operations, documentation generation, email drafting, data organization, and automation planning.</p></div>
+        <div class="skill-box"><h3>Linux / Kali</h3><p>Terminal usage, package management, permissions, services, logs, SSH, system updates, lab setup, and troubleshooting.</p></div>
+        <div class="skill-box"><h3>Hardware Repair</h3><p>Diagnostics, upgrades, storage, RAM, thermal issues, driver conflicts, device setup, component replacement, and performance tuning.</p></div>
+        <div class="skill-box"><h3>Professional Communication</h3><p>Customer explanations, repair notes, follow-up communication, service documentation, training content, and technical walkthroughs.</p></div>
       </div>
     </section>
 
-    <section id="experience" class="section">
-      <p class="section-tag">Experience</p>
-      <h2>Work History</h2>
+    <section class="section reveal" id="experience">
+      <div class="section-heading">
+        <p class="section-tag">Experience</p>
+        <h2>Job Experience</h2>
+      </div>
 
       <div class="timeline">
         <article class="timeline-item">
-          <div class="timeline-date">Owner • Add Dates</div>
+          <div class="timeline-date">2021–Present</div>
           <div class="timeline-content">
-            <h3>Kingman Computer Repair LLC</h3>
-            <p class="role">Founder / Owner / Lead Technician</p>
-
+            <h3>Kingman Computers / Kingman Computer Repair LLC</h3>
+            <p class="role">Owner / Founder / Lead Technician</p>
             <ul>
-              <li>Own and operate a thriving computer repair business serving customers in the Kingman, Arizona area.</li>
-              <li>Perform diagnostics, virus and malware cleanup, Windows repairs, data transfers, hardware upgrades, and system tune-ups.</li>
-              <li>Troubleshoot desktops, laptops, networks, printers, drivers, operating system issues, and customer software problems.</li>
-              <li>Explain technical problems in simple language so customers understand what failed, what was fixed, and how to prevent future issues.</li>
-              <li>Manage day-to-day business operations, customer intake, repair estimates, follow-ups, parts research, and service quality.</li>
+              <li>Own and operate a professional computer repair and technology support business in Kingman, Arizona.</li>
+              <li>Provide computer diagnostics, Windows repair, malware cleanup, operating system recovery, driver troubleshooting, data transfer, backup help, and hardware replacement.</li>
+              <li>Deliver MSP-style support for multiple businesses, including workstation issues, network troubleshooting, user support, printer problems, software support, and ongoing technical service.</li>
+              <li>Manage customer intake, estimates, repair workflow, parts research, service documentation, customer communication, and follow-up.</li>
+              <li>Use practical troubleshooting methods to identify root causes and explain technical solutions in a way customers understand.</li>
             </ul>
           </div>
         </article>
 
         <article class="timeline-item">
-          <div class="timeline-date">2018 – 2022</div>
+          <div class="timeline-date">2017–2021</div>
           <div class="timeline-content">
             <h3>Computer Nerds</h3>
             <p class="role">Manager / Lead Technician</p>
-
             <ul>
-              <li>Served in a leadership role handling daily troubleshooting across Windows systems, Linux systems, customer devices, and small business environments.</li>
-              <li>Managed repair workflow, customer communication, technical support, and hands-on system repair.</li>
-              <li>Performed operating system repairs, virus removals, hardware diagnostics, software troubleshooting, and network issue resolution.</li>
-              <li>Supported customers with practical, real-world IT solutions while maintaining strong service quality and clear communication.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-date">Ongoing</div>
-          <div class="timeline-content">
-            <h3>Frost Hacking Academy</h3>
-            <p class="role">Founder / Cybersecurity Training Builder</p>
-
-            <ul>
-              <li>Built a cybersecurity training project focused on ethical hacking, defensive thinking, Kali Linux, OSINT, web security, Wi-Fi security, and hands-on labs.</li>
-              <li>Created beginner-friendly rooms, cheat sheets, challenge labs, Raspberry Pi projects, and cybersecurity learning paths.</li>
-              <li>Designed training around the idea: “Train like a hacker. Think like a defender.”</li>
-              <li>Developed educational content that teaches tools, commands, reporting, lab safety, and real-world defensive lessons.</li>
+              <li>Served as Manager and Lead Technician, supporting daily repair operations and technical service delivery.</li>
+              <li>Troubleshot Windows systems, Linux systems, customer workstations, hardware failures, malware infections, network issues, driver problems, and software errors.</li>
+              <li>Helped manage repair priorities, customer communication, service quality, technical workflow, and hands-on troubleshooting.</li>
+              <li>Built strong real-world experience solving technology problems under customer deadlines and business expectations.</li>
             </ul>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <p class="section-tag">Projects</p>
-      <h2>Featured Projects</h2>
+    <section class="section reveal" id="projects">
+      <div class="section-heading">
+        <p class="section-tag">Projects</p>
+        <h2>Featured Projects</h2>
+      </div>
 
       <div class="project-grid">
         <article class="project-card featured">
-          <div class="project-label">AI Automation</div>
-          <h3>OpenClaw + Venice.ai Computer-Control AI Bot</h3>
-
-          <p>
-            Built an AI automation bot using OpenClaw connected with a Venice.ai LLM workflow.
-            The project was designed to act like a practical AI assistant that can help control
-            computer tasks, run diagnostics, organize data, assist with repair workflows, and
-            automate routine technical work.
-          </p>
-
-          <ul>
-            <li>Created an AI workflow capable of assisting with computer diagnostics and repair tasks.</li>
-            <li>Designed automation for malware cleanup research, corruption repair steps, driver troubleshooting, and system maintenance support.</li>
-            <li>Built email productivity features for writing emails, creating follow-ups, and helping manage customer communication.</li>
-            <li>Used AI to help generate ready-to-go software ideas, scripts, repair tools, documentation, and technical workflows.</li>
-            <li>Focused on practical IT use cases: customer support, diagnostics, file organization, data sorting, and repair-shop automation.</li>
-          </ul>
-
-          <div class="tech-stack">
-            <span>OpenClaw</span>
-            <span>Venice.ai</span>
-            <span>LLM Tools</span>
-            <span>Automation</span>
-            <span>IT Diagnostics</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-label">Cybersecurity Training</div>
+          <div class="project-label">Cybersecurity Software</div>
           <h3>Frost Hacking Academy</h3>
           <p>
-            Built a hands-on cybersecurity learning platform concept with rooms for Kali Linux,
-            ethical hacking, OSINT, Raspberry Pi labs, Python cheat scripts, CTFs, and defensive security.
+            Built Frost Hacking Academy as a cybersecurity software and training program designed to teach ethical hacking, cybersecurity fundamentals, labs, guided rooms, cheat sheets, and defensive thinking. The project includes learning paths for Kali Linux, OSINT, Python cheat scripts, Raspberry Pi projects, VPN labs, CTF challenges, Wi-Fi security, web security, and beginner cyber fundamentals.
           </p>
-          <div class="tech-stack">
-            <span>Kali Linux</span>
-            <span>OSINT</span>
-            <span>CTF Labs</span>
-            <span>Training Design</span>
-          </div>
+          <ul>
+            <li>Designed the training structure, classroom flow, lab content, challenge rooms, and promotional brand system.</li>
+            <li>Built the program around ethical use, authorized labs, defensive explanations, and beginner-friendly learning.</li>
+            <li>Created hands-on projects that teach students how to build real security tools, document findings, and understand risk.</li>
+          </ul>
+          <div class="tech-stack"><span>Kali Linux</span><span>OSINT</span><span>CTFs</span><span>Python</span><span>Training Software</span></div>
+        </article>
+
+        <article class="project-card featured" id="ai-project">
+          <div class="project-label">AI Automation</div>
+          <h3>LLM-Powered IT Workflow Automation</h3>
+          <p>
+            Built and tested professional AI workflows using LLM tools and OpenClaw-style automation concepts to assist with IT diagnostics, customer communication, technical documentation, repair planning, data organization, email drafting, follow-up messages, script generation, and support productivity.
+          </p>
+          <ul>
+            <li>Designed AI-assisted workflows to help technicians organize repair steps, document findings, and improve service consistency.</li>
+            <li>Used LLMs to accelerate support writing, troubleshooting notes, software planning, and cybersecurity learning material.</li>
+            <li>Focused on responsible automation where AI improves workflow speed while human review stays in control.</li>
+          </ul>
+          <div class="tech-stack"><span>LLMs</span><span>AI Agents</span><span>OpenClaw</span><span>Venice.ai</span><span>Workflow Automation</span></div>
         </article>
 
         <article class="project-card">
           <div class="project-label">Raspberry Pi</div>
           <h3>Build Your Own VPN Lab</h3>
-          <p>
-            Created a beginner-friendly Raspberry Pi VPN classroom that walks students through
-            Raspberry Pi OS, SSH, Linux updates, PiVPN, WireGuard, router port forwarding,
-            testing, troubleshooting, and security documentation.
-          </p>
-          <div class="tech-stack">
-            <span>Raspberry Pi</span>
-            <span>PiVPN</span>
-            <span>WireGuard</span>
-            <span>Linux</span>
-          </div>
+          <p>Created a beginner-friendly Raspberry Pi VPN classroom covering Raspberry Pi OS, SSH, Linux updates, PiVPN, WireGuard, router port forwarding, testing, troubleshooting, and documentation.</p>
+          <div class="tech-stack"><span>Raspberry Pi</span><span>PiVPN</span><span>WireGuard</span><span>Linux</span></div>
         </article>
 
         <article class="project-card">
           <div class="project-label">Home Lab</div>
-          <h3>Plex Server & Home Server Builds</h3>
-          <p>
-            Built and maintained home server projects including media server setups, storage planning,
-            network configuration, remote access learning, and server troubleshooting.
-          </p>
-          <div class="tech-stack">
-            <span>Plex</span>
-            <span>Networking</span>
-            <span>Storage</span>
-            <span>Servers</span>
-          </div>
+          <h3>Pi-hole and DNS Security Path</h3>
+          <p>Built a follow-up project path for DNS filtering, Pi-hole basics, network-level blocking, router DNS settings, and combining Pi-hole with VPN access for remote filtering.</p>
+          <div class="tech-stack"><span>Pi-hole</span><span>DNS</span><span>Filtering</span><span>Networking</span></div>
         </article>
 
         <article class="project-card">
-          <div class="project-label">Web / Automation</div>
-          <h3>Webpage and Script Builds</h3>
-          <p>
-            Built web pages, automation scripts, cybersecurity cheat sheets, training content,
-            and beginner-friendly technical documentation for IT and cybersecurity learners.
-          </p>
-          <div class="tech-stack">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Python</span>
-            <span>Docs</span>
-          </div>
+          <div class="project-label">Servers</div>
+          <h3>Plex and Home Server Builds</h3>
+          <p>Built and maintained home server projects including Plex media servers, storage planning, remote access testing, networking, and troubleshooting.</p>
+          <div class="tech-stack"><span>Plex</span><span>Storage</span><span>Servers</span><span>Networking</span></div>
         </article>
 
         <article class="project-card">
-          <div class="project-label">Network Security</div>
-          <h3>VPN, Wi-Fi & Lab Network Projects</h3>
-          <p>
-            Built lab-focused networking projects around VPNs, Wi-Fi testing, router configuration,
-            network scanning, home lab segmentation, and defensive security practice.
-          </p>
-          <div class="tech-stack">
-            <span>Nmap</span>
-            <span>Wireshark</span>
-            <span>VPN</span>
-            <span>Networking</span>
-          </div>
+          <div class="project-label">Pentest Labs</div>
+          <h3>Kali Linux and CTF Practice</h3>
+          <p>Practiced authorized cybersecurity labs using Kali Linux, Nmap, Wireshark, Burp Suite, OSINT tools, password auditing concepts, vulnerable machines, and capture-the-flag environments.</p>
+          <div class="tech-stack"><span>Nmap</span><span>Wireshark</span><span>Burp Suite</span><span>CTFs</span></div>
         </article>
       </div>
     </section>
 
-    <section id="education" class="section two-column">
-      <div>
-        <p class="section-tag">Education</p>
-        <h2>Degrees & Training</h2>
+    <section class="section two-column reveal" id="education">
+      <div class="section-heading compact">
+        <p class="section-tag">Education and Certifications</p>
+        <h2>Academic and Professional Training</h2>
       </div>
 
       <div class="education-list">
         <article class="education-card">
           <h3>Strayer University</h3>
           <p class="role">Bachelor’s Degree in Computer Information Technology</p>
-          <p>Add graduation date or expected graduation date here.</p>
+          <p>Major: Cybersecurity<br />Expected Completion: Fall 2026<br />GPA: 3.70<br />Maintained honors-level academic performance, completed honors coursework, and participated in honor society activities.</p>
         </article>
 
         <article class="education-card">
           <h3>Strayer University</h3>
           <p class="role">Associate Degree in Computer Information Technology</p>
-          <p>Add graduation date here.</p>
+          <p>Completed: 2020–2022<br />Focused on information technology, computer systems, networking, technical support, and practical IT problem solving.</p>
         </article>
 
         <article class="education-card">
-          <h3>Certifications & Technical Training</h3>
-          <p>
-            Google IT Support, TestOut certifications, cybersecurity labs, ethical hacking practice,
-            Linux, networking, Windows troubleshooting, and hands-on IT repair experience.
-          </p>
+          <h3>Arizona State University</h3>
+          <p class="role">Planned Master’s Program</p>
+          <p>Planned Start: Winter 2027<br />Continuing graduate-level education path focused on advanced technology and cybersecurity growth.</p>
+        </article>
+
+        <article class="education-card">
+          <h3>Raptos Cybersecurity Team</h3>
+          <p class="role">Cybersecurity Team Member / CTF Competitor</p>
+          <p>Member of the school cybersecurity team competing against other schools in capture-the-flag events and cybersecurity challenges, building skills in ethical hacking, research, teamwork, and technical problem solving.</p>
+        </article>
+
+        <article class="education-card">
+          <h3>Certifications</h3>
+          <p class="role">Google IT Support and TestOut Pro Certification</p>
+          <p>Google IT Support Certificate: 2022<br />TestOut Pro Certification<br />Additional hands-on training in Windows, Linux, networking, troubleshooting, ethical hacking labs, and cybersecurity fundamentals.</p>
         </article>
       </div>
     </section>
 
-    <section class="section">
-      <p class="section-tag">What I Bring</p>
-      <h2>Why I Stand Out</h2>
-
+    <section class="section reveal">
+      <div class="section-heading">
+        <p class="section-tag">Why Hire Me</p>
+        <h2>What Makes Me Different</h2>
+      </div>
       <div class="value-grid">
-        <div>
-          <h3>Real Repair Experience</h3>
-          <p>I do not just study technology. I fix real computers, solve real customer problems, and run a real repair business.</p>
-        </div>
-
-        <div>
-          <h3>Cybersecurity Mindset</h3>
-          <p>I approach systems like a defender who understands how attackers think, where weak points are, and how to reduce risk.</p>
-        </div>
-
-        <div>
-          <h3>AI-Ready Skillset</h3>
-          <p>I am actively building with AI tools, LLMs, automation agents, and workflows that can improve support, repair, and productivity.</p>
-        </div>
-
-        <div>
-          <h3>Business Ownership</h3>
-          <p>I understand customer service, responsibility, communication, follow-through, and the pressure of solving problems correctly.</p>
-        </div>
+        <div><h3>Real Repair Business</h3><p>I bring real-world pressure-tested experience from supporting customers, businesses, and damaged systems.</p></div>
+        <div><h3>Cyber Builder</h3><p>I build labs, training rooms, CTF paths, and defensive lessons instead of only listing cybersecurity tools.</p></div>
+        <div><h3>AI-Enhanced Technician</h3><p>I use LLMs to improve documentation, diagnostics, workflow speed, support communication, and automation planning.</p></div>
+        <div><h3>Growth Mindset</h3><p>I am actively finishing a cybersecurity-focused bachelor’s degree and preparing for graduate study at ASU.</p></div>
       </div>
     </section>
 
-    <section id="contact" class="section contact-section">
-      <div>
+    <section class="section contact-section reveal" id="contact">
+      <div class="section-heading compact">
         <p class="section-tag">Contact</p>
         <h2>Let’s Connect</h2>
-        <p>
-          I am open to IT, cybersecurity, technical support, AI automation, repair, and technology-focused opportunities.
-        </p>
+        <p>I am open to IT support, MSP, cybersecurity, junior penetration testing, technical support, AI automation, repair, help desk, and technology-focused opportunities.</p>
       </div>
 
       <div class="contact-card">
         <p><strong>Email:</strong> <a href="mailto:lancefrost9@gmail.com">lancefrost9@gmail.com</a></p>
         <p><strong>Phone:</strong> <a href="tel:+19282791297">928-279-1297</a></p>
         <p><strong>Location:</strong> Kingman, Arizona</p>
-        <p><strong>GitHub:</strong> <a href="#">Add your GitHub link here</a></p>
-        <p><strong>LinkedIn:</strong> <a href="#">Add your LinkedIn link here</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lance-frost-212480397/" target="_blank" rel="noopener noreferrer">linkedin.com/in/lance-frost-212480397</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/hackmeoffplz" target="_blank" rel="noopener noreferrer">github.com/hackmeoffplz</a></p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Lance Frost. Built with a Frost Hacking Academy inspired theme.</p>
+    <p>© <span id="year"></span> Lance Frost. Frost-themed resume portfolio built for IT, cybersecurity, and AI automation opportunities.</p>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+const commandData = {
+  overview: `frost@command-center:~$ run overview
 
+[✓] Owner of Kingman Computers / Kingman Computer Repair LLC
+[✓] Former Manager / Lead Technician at Computer Nerds
+[✓] Bachelor’s in Computer Information Technology, Cybersecurity major, Fall 2026
+[✓] Raptos cybersecurity team member and CTF competitor
+[✓] AI workflow builder using LLMs for practical IT support automation
+[✓] Creator of Frost Hacking Academy cybersecurity software and training program
+
+Result: practical technician + cybersecurity mindset + AI automation builder`,
+
+  cyber: `frost@command-center:~$ run cybersecurity-profile
+
+Core areas:
+- Ethical hacking methodology
+- Kali Linux labs
+- Nmap reconnaissance and enumeration
+- Wireshark packet analysis basics
+- OSINT investigations
+- Web security labs
+- Capture-the-flag practice
+- Defensive recommendations and reporting
+
+Security mindset:
+Train like a hacker. Think like a defender.`,
+
+  ai: `frost@command-center:~$ run ai-automation-profile
+
+AI automation focus:
+- LLM-powered IT support workflows
+- Diagnostics planning and documentation
+- Email drafting and follow-up automation
+- Data organization and repair notes
+- Script generation and software planning
+- Customer support productivity systems
+
+Goal:
+Use AI responsibly to make technical support faster, clearer, and more consistent.`,
+
+  msp: `frost@command-center:~$ run msp-repair-profile
+
+Experience:
+- Computer repair business owner
+- Small business technology support
+- Workstation troubleshooting
+- Router, Wi-Fi, printer, and software support
+- Malware cleanup and Windows repair
+- Driver troubleshooting and system optimization
+- Customer communication and service follow-through
+
+Result:
+Real-world support experience under real customer expectations.`,
+
+  education: `frost@command-center:~$ run education-profile
+
+Education:
+- Strayer University Associate Degree in Computer Information Technology, 2020–2022
+- Strayer University Bachelor’s in Computer Information Technology, Cybersecurity major, Fall 2026
+- GPA: 3.70
+- Honors coursework and honor society participation
+- Raptos Cybersecurity Team / CTF competitor
+- Google IT Support Certificate, 2022
+- TestOut Pro Certification
+- Planned Master’s program at Arizona State University, Winter 2027`
+};
+
+const loader = document.getElementById('loader');
+const body = document.body;
+body.classList.add('locked');
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    loader.classList.add('hidden');
+    body.classList.remove('locked');
+  }, 3000);
+});
+
+const output = document.getElementById('commandOutput');
+const buttons = document.querySelectorAll('.command-button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    buttons.forEach((btn) => btn.classList.remove('active'));
+    button.classList.add('active');
+    const key = button.dataset.command;
+    output.innerHTML = `<code>${commandData[key]}</code>`;
+  });
+});
+
+const menuButton = document.getElementById('menuButton');
+const navLinks = document.getElementById('navLinks');
+
+menuButton.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+});
+
+document.querySelectorAll('.nav-links a').forEach((link) => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', 'false');
+  });
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+</script>
+</body>
+</html> 
